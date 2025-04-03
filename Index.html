@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #test-area {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing Area</h1>
+
+    <p>This is a basic HTML file for testing purposes.</p>
+
+    <div id="test-area">
+        <p id="test-paragraph">Initial Text.</p>
+        <button id="test-button">Click Me</button>
+        <div id="test-output"></div>
+    </div>
+
+    <script>
+        document.getElementById("test-button").addEventListener("click", function() {
+            document.getElementById("test-paragraph").textContent = "Button Clicked!";
+            document.getElementById("test-output").textContent = "Button click event captured.";
+        });
+
+        // Example Javascript function for testing
+        function testFunction(input) {
+            return "Input was: " + input;
+        }
+
+        //Simple script to test the function
+        console.log(testFunction("Hello"));
+
+        //Example of adding an element dynamically.
+        let newElement = document.createElement("p");
+        newElement.textContent = "Dynamically added paragraph.";
+        document.getElementById("test-area").appendChild(newElement);
+
+        //Example of mathematical expression in html.
+        let mathOutput = document.createElement("p");
+        mathOutput.innerHTML = "The square root of 4 is: " + Math.sqrt(4);
+        document.getElementById("test-area").appendChild(mathOutput);
+
+        //Example of latex rendering.
+        let latexOutput = document.createElement("p");
+        latexOutput.innerHTML = "Latex example: $$\\sqrt{x^2 + y^2}$$";
+        document.getElementById("test-area").appendChild(latexOutput);
+
+    </script>
+</body>
+</html>
